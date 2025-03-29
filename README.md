@@ -36,3 +36,11 @@ module "vpc" {
 git tag vpc-v1.0.0
 git push origin vpc-v1.0.0
 ```
+# Handling Private Repositories
+```
+# Using SSH:
+source = "git@github.com:<YOUR_GITHUB_USERNAME>/terraform-modules.git//vpc?ref=v1.0.0"
+
+# Using HTTPS + GitHub PAT:
+source = "https://<YOUR_GITHUB_PAT>@github.com/<YOUR_GITHUB_USERNAME>/terraform-modules.git//s3?ref=v2.0.0"
+``` 
